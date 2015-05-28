@@ -22,18 +22,23 @@ package finalgame;
  */
 public class Board {
     
-    Place[][] gameBoard;
+    Unit[][] units;
+    Terrain[][] terrain;
+    
     /**
      * @param xDim
      * @param yDim 
      */
     public Board(int xDim, int yDim){
-        gameBoard = new Place[xDim][yDim];
+        units = new Unit[xDim][yDim];
+        terrain = new Terrain[xDim][yDim];
         for (int i = 0; i < xDim; i++){
             for (int j = 0; j < yDim; j++){
-                Unit empty = new EmptyUnit();
+                
                 Terrain rand = randTerrain(i, j);
-                gameBoard[i][j] = new Place(empty, rand);
+                
+                units[i][j] = new EmptyUnit();
+                terrain[i][j] = rand;
             }
         } // Creates board with random terrain and empty units
     }
@@ -51,4 +56,57 @@ public class Board {
         Terrain ret = new Plain();
         return ret;
     }
+    
+    /**
+     * 
+     * @param aUnit
+     * @param x
+     * @param y 
+     * @return if location is empty
+     */
+    public boolean addUnit(Unit aUnit, int x, int y){
+        if (!units[x][y].isEmpty) return false;
+        
+        units[x][y] = aUnit;
+        
+        return true;
+    }
+    
+    /**
+     * 
+     * @param xFrom
+     * @param yFrom
+     * @param xTo
+     * @param yTo 
+     * @return true if to and from coordinates are both empty
+     */
+    public boolean moveUnit(int xFrom, int yFrom, int xTo, int yTo){
+        if (!units[xFrom][yFrom].isEmpty && units[xTo][yTo].isEmpty){
+            units[xTo][yTo] = units[xFrom][yFrom];
+            units[xFrom][yFrom] = new EmptyUnit();
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+     * 
+     * @param x
+     * @param y
+     * @return Unit at (x,y)
+     */
+    public Unit getUnit(int x, int y){
+        return units[x][y];
+    }
+    
+    /**
+     * 
+     * @param x
+     * @param y
+     * @return Terrain at (x,y)
+     */
+    public Terrain getTerain(int x, int y){
+        return terrain[x][y];
+    }
+    
 }
