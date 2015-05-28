@@ -22,6 +22,7 @@ package finalgame;
  */
 public abstract class Unit {
     
+    int player;
     int attack;
     int defense;
     int health;
