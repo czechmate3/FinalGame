@@ -22,8 +22,9 @@ package finalgame;
  */
 public class Infantry extends Unit {
     
-    public Infantry(){
-        
+    public Infantry(int playerNum){
+    
+    player = playerNum;    
     attack = 5;
     defense = 5;
     health = 50;
