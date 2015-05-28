@@ -7,7 +7,7 @@ package finalgame;
 
 /**
  *
- * @author 24701
+ * @author Ben Kaeder and Erich Vrany
  */
 public class FinalGame {
 
