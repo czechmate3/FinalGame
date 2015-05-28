@@ -22,8 +22,9 @@ package finalgame;
  */
 public class Hero extends Unit {
     
-    public Hero(){
-        
+    public Hero(int playerNum){
+    
+    player = playerNum;    
     attack = 10;
     defense = 10;
     health = 50;
