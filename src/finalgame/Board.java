@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Erich Vrany
+ * Copyright (C) 2015 Ben Kaeder and Erich Vrany
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@ package finalgame;
 
 /**
  *
- * @author Erich Vrany
+ * @author Ben Kaeder and Erich Vrany
  */
 public class Board {
     
