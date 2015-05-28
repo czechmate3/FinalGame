@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Ben Kaeder
+ * Copyright (C) 2015 Ben Kaeder and Erich Vrany
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@ package finalgame;
 
 /**
  *
- * @author Ben Kaeder
+ * @author Ben Kaeder and Erich Vrany
  */
 public abstract class Unit {
     
@@ -28,6 +28,9 @@ public abstract class Unit {
     int health;
     int moves;
     int range;
+    int xLocation;
+    int yLocation;
+    
     boolean isEmpty;
     
     public Unit(){
