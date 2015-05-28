@@ -34,7 +34,9 @@ public abstract class Unit {
     boolean isEmpty;
     
     public Unit(){
-}
+        
+    }
+    
     
     public void attack(int whereX, int whereY){
         
