@@ -31,11 +31,17 @@ public class Board {
         gameBoard = new Place[xDim][yDim];
         for (int i = 0; i < xDim; i++){
             for (int j = 0; j < yDim; j++){
-                
+                Unit empty = new EmptyUnit();
+                Terrain rand = randTerrain(i, j);
+                gameBoard[i][j] = new Place(empty, rand);
             }
         }
     }
-    //public Place randPlace(int x, int y){
-        // Put things here
-    //}
+    public static Terrain randTerrain(int x, int y){
+        
+        // Temporary
+        // Will fix later
+        Terrain ret = new Plain();
+        return ret;
+    }
 }
