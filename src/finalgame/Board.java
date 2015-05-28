@@ -35,8 +35,15 @@ public class Board {
                 Terrain rand = randTerrain(i, j);
                 gameBoard[i][j] = new Place(empty, rand);
             }
-        }
+        } // Creates board with random terrain and empty units
     }
+    
+    /**
+     * 
+     * @param x
+     * @param y
+     * @return A random terrain object
+     */
     public static Terrain randTerrain(int x, int y){
         
         // Temporary
