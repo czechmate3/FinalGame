@@ -20,6 +20,32 @@ package finalgame;
  *
  * @author Erich Vrany
  */
-public interface Terrain {
+public abstract class Terrain {
+    int movement;
+    int defense;
+    int attack;
     
+    /**
+     * 
+     * @return attack
+     */
+    public int getAttack(){
+        return attack;
+    }
+    
+    /**
+     * 
+     * @return defense
+     */
+    public int getDefense(){
+        return defense;
+    }
+    
+    /**
+     * 
+     * @return movement
+     */
+    public int getMovement(){
+        return movement;
+    }
 }
