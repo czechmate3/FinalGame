@@ -22,8 +22,9 @@ package finalgame;
  */
 public class Cavalry extends Unit {
     
-    public Cavalry(){
+    public Cavalry(int playerNum){
         
+    player = playerNum;    
     attack = 5;
     defense = 5;
     health = 50;
