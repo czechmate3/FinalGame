@@ -37,13 +37,6 @@ public abstract class Unit {
         
     }
     
-    
-    public void attack(int whereX, int whereY){
-        
-    }
-    public void move(int whereX, int whereY){
-        
-    }
     public int getAttack(){
         return attack;
     }
@@ -58,6 +51,22 @@ public abstract class Unit {
     }
     public int getRange(){
         return range;
+    }
+    
+    public void setAttack(int toWhat){
+        attack = toWhat;
+    }
+    public void setDefense(int toWhat){
+        defense = toWhat;
+    }
+    public void setHealth(int toWhat){
+        health = toWhat;
+    }
+    public void setMoves(int toWhat){
+        moves = toWhat;
+    }
+    public void setRange(int toWhat){
+        range = toWhat;
     }
     
 }
