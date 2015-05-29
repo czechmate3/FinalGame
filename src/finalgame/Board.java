@@ -101,7 +101,8 @@ public class Board {
         if (!units[xTo][yTo].isEmpty && !units[xFrom][yFrom].isEmpty && 
                 units[xFrom][yFrom].player != units[xTo][yTo].player){
             
-            units[xTo][yTo].setHealth(units[xFrom][yFrom].attack);
+            units[xTo][yTo].setHealth(units[xTo][yTo].getHealth() - 
+                    units[xFrom][yFrom].attack);
             
             return true;
         }
