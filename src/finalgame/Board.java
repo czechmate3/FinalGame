@@ -53,7 +53,7 @@ public class Board {
         
         // Temporary
         // Will fix later
-        Terrain ret = new Plain();
+        Terrain ret = new Terrain((int) (Math.random() * 5));
         return ret;
     }
     
@@ -65,7 +65,7 @@ public class Board {
      * @return if location is empty
      */
     public boolean addUnit(Unit aUnit, int x, int y){
-        if (!units[x][y].isEmpty) return false;
+        if (!units[x][y].isEmpty || terrain[x][y].type == 4) return false;
         
         units[x][y] = aUnit;
         
@@ -84,6 +84,25 @@ public class Board {
         if (!units[xFrom][yFrom].isEmpty && units[xTo][yTo].isEmpty){
             units[xTo][yTo] = units[xFrom][yFrom];
             units[xFrom][yFrom] = new EmptyUnit();
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+     * 
+     * @param xFrom
+     * @param yFrom
+     * @param xTo
+     * @param yTo
+     * @return true if attack is possible, else false
+     */
+    public boolean attack(int xFrom, int yFrom, int xTo, int yTo){
+        if (!units[xTo][yTo].isEmpty && !units[xFrom][yFrom].isEmpty && 
+                units[xFrom][yFrom].player != units[xTo][yTo].player){
+            
+            units[xTo][yTo].setHealth(units[xFrom][yFrom].attack);
+            
             return true;
         }
         return false;

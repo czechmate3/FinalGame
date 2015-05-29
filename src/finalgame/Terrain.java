@@ -20,32 +20,19 @@ package finalgame;
  *
  * @author Ben Kaeder and Erich Vrany
  */
-public abstract class Terrain {
-    int movement;
-    int defense;
-    int attack;
+public class Terrain {
     
-    /**
-     * 
-     * @return attack
-     */
-    public int getAttack(){
-        return attack;
+    int type;
+    
+    public Terrain(int type){
+        this.type = type;
     }
     
     /**
      * 
-     * @return defense
+     * @return 0 if plains, 1 if woods, 2 if water, 3 if hills, 4 if mountains
      */
-    public int getDefense(){
-        return defense;
-    }
-    
-    /**
-     * 
-     * @return movement
-     */
-    public int getMovement(){
-        return movement;
+    public int getType(){
+        return type;
     }
 }
