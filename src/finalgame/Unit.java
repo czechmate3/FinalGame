@@ -22,6 +22,7 @@ package finalgame;
  */
 public abstract class Unit {
     
+    int type; //infantry = 0, archers = 1, cavalry = 2, hero = 3
     int player;
     int attack;
     int defense;
@@ -68,5 +69,7 @@ public abstract class Unit {
     public void setRange(int toWhat){
         range = toWhat;
     }
+    
+    
     
 }
