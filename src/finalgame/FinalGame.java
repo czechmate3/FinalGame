@@ -15,7 +15,7 @@ public class FinalGame {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        NewJFrame test = new NewJFrame();
     }
     
 }
