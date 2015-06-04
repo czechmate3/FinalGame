@@ -142,4 +142,10 @@ public class Board {
         return terrain[x][y];
     }
     
+    @Override
+    public String toString(){
+        return "LOL... I haven't written the code for this yet.";
+        
+    }
+    
 }
