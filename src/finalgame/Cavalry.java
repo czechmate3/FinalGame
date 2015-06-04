@@ -24,6 +24,7 @@ public class Cavalry extends Unit {
     
     public Cavalry(int playerNum){
         
+    type = 2;    
     player = playerNum;    
     attack = 5;
     defense = 5;
