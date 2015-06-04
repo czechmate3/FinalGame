@@ -81,10 +81,24 @@ public class Board {
      * @return true if to and from coordinates are both empty
      */
     public boolean moveUnit(int xFrom, int yFrom, int xTo, int yTo){
+    
+       
+        if(getTerrain(xFrom, yFrom).getType() == 1) getUnit(xFrom, yFrom).setMoves(1);
+        else if(getTerrain(xFrom, yFrom).getType() == 2) getUnit(xFrom, yFrom).setMoves(1);
+        else if(getTerrain(xFrom, yFrom).getType() == 3) getUnit(xFrom, yFrom).setMoves(1);
+        else if(getTerrain(xFrom, yFrom).getType() == 0) getUnit(xFrom, yFrom).setMoves(2);
+        
+        if(getUnit(xFrom, yFrom).getType() == 2) getUnit(xFrom, yFrom).setMoves(getUnit(xFrom, yFrom).getMoves() * 2);
+
+        if(getTerrain(xTo, yTo).getType() != 4){
+        if((xTo - xFrom) + (yTo - yFrom) <= getUnit(xFrom, yFrom).getMoves()){
+        
         if (!units[xFrom][yFrom].isEmpty && units[xTo][yTo].isEmpty){
             units[xTo][yTo] = units[xFrom][yFrom];
             units[xFrom][yFrom] = new EmptyUnit();
             return true;
+        }
+        }
         }
         return false;
     }
@@ -101,7 +115,7 @@ public class Board {
         if (!units[xTo][yTo].isEmpty && !units[xFrom][yFrom].isEmpty && 
                 units[xFrom][yFrom].player != units[xTo][yTo].player){
             
-            units[xTo][yTo].setHealth(units[xFrom][yFrom].attack);
+            units[xTo][yTo].setHealth(units[xTo][yTo].health - ((int) Math.random() * units[xFrom][yFrom].attack -  (int) Math.random() * units[xTo][yTo].defense));
             
             return true;
         }
@@ -124,7 +138,7 @@ public class Board {
      * @param y
      * @return Terrain at (x,y)
      */
-    public Terrain getTerain(int x, int y){
+    public Terrain getTerrain(int x, int y){
         return terrain[x][y];
     }
     
