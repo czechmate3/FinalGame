@@ -23,7 +23,8 @@ package finalgame;
 public class Archer extends Unit {
     
     public Archer(int playerNum){
-        
+    
+    type = 1;    
     player = playerNum;    
     attack = 5;
     defense = 2;
