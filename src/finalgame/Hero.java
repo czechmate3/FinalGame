@@ -24,6 +24,7 @@ public class Hero extends Unit {
     
     public Hero(int playerNum){
     
+    type = 3;
     player = playerNum;    
     attack = 10;
     defense = 10;
