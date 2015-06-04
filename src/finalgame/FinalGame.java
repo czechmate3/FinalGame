@@ -15,7 +15,13 @@ public class FinalGame {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        NewJFrame test = new NewJFrame();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new NewJFrame().setVisible(true);
+            }
+        });
+    
+        System.out.println("Something");
     }
     
 }
