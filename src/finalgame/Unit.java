@@ -53,6 +53,12 @@ public abstract class Unit {
     public int getRange(){
         return range;
     }
+    public int getType(){
+        return type;
+    }
+    public int getPlayer(){
+        return player;
+    }
     
     public void setAttack(int toWhat){
         attack = toWhat;
@@ -68,6 +74,12 @@ public abstract class Unit {
     }
     public void setRange(int toWhat){
         range = toWhat;
+    }
+    public void setType(int toWhat){
+        type = toWhat;
+    }
+    public void setPlayer(int toWhat){
+        player = toWhat;
     }
     
     
