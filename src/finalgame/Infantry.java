@@ -24,6 +24,7 @@ public class Infantry extends Unit {
     
     public Infantry(int playerNum){
     
+    type = 0;
     player = playerNum;    
     attack = 5;
     defense = 5;
