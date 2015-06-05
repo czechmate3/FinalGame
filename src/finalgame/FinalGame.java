@@ -5,11 +5,13 @@
  */
 package finalgame;
 
+
+
 /**
  *
  * @author Ben Kaeder and Erich Vrany
  */
-public class FinalGame {
+public class FinalGame extends NewJFrame {
 
     /**
      * @param args the command line arguments
@@ -18,10 +20,12 @@ public class FinalGame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new NewJFrame().setVisible(true);
+
             }
         });
-    
-        System.out.println("Something");
+
+        //jTextArea1.append("Did work.");
+        
     }
-    
+
 }
