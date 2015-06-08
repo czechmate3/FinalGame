@@ -42,7 +42,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jFrame1 = new javax.swing.JFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextArea1 = new javax.swing.JTextArea("Welcome to this game.");
         jTextField1 = new javax.swing.JTextField();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
